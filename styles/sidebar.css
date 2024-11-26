@@ -1,0 +1,94 @@
+/* 사이드바 기본 (확장) */
+.even-sidebar {
+    width: 240px;
+    height: 100%; 
+    background-color: #032911;
+    position: fixed;
+    left: 0px;
+    right: 1097px;
+    z-index: 100;
+    transition: width 0.3s ease; 
+  }
+
+  .even-sidebar-container {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .even-sidebar-guide {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .even-guide-content {
+    /*background: #0f0f0f;*/
+    flex: 1;
+    flex-basis: 0.000000001px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .even-sidebar-header {
+    height: 56px;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .even-inner-content {
+    overflow: hidden;
+    flex: 1;
+    flex-basis: 0.000000001px;
+    overflow-y: auto;
+    scrollbar-color: red;
+    scrollbar-width: thin;
+  }
+
+  .even-inner-group {
+    width: 240px;
+  }
+
+  .even-inner-sections {
+    position: relative;
+  }
+
+  .even-items {
+    height: 40px;
+    background-color: rgb(3, 114, 93);
+  }
+
+  .even-point {
+    min-height: 48px;
+    cursor: pointer;
+    box-sizing: border-box;
+    outline: 0;
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .even-scope {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  .even-icon {
+    width: 24px;
+    height: 24px;
+    color: red;
+    margin-right: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
