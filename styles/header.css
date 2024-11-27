@@ -11,7 +11,7 @@
 	border-bottom: 1px solid black;
 }
 
-.left-section{
+.left-section {
 	display: flex;
 	align-items: center;
 }
@@ -22,7 +22,7 @@
 }
 .header-logo {
 	width: auto;
-    height: 65px;
+	height: 65px;
 	margin-left: -40px;
 }
 .middel-section {
