@@ -10,3 +10,28 @@
 	/* background-color: black; */
 	border-bottom: 1px solid black;
 }
+
+.left-section{
+	display: flex;
+	align-items: center;
+}
+
+.header-menu {
+	height: 24px;
+	margin: 0 24px;
+}
+.header-logo {
+	width: auto;
+    height: 65px;
+	margin-left: -40px;
+}
+.middel-section {
+	flex: 1px;
+	max-width: 500px;
+	align-items: center;
+}
+
+.search-btn{
+	height: 40px;
+	width: 60px;
+}
