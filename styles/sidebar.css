@@ -1,0 +1,70 @@
+/* 사이드바 기본 (확장) */
+.even-sidebar-section{
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+}
+
+.even-sidebar-inner {
+  padding: 0 12px;
+}
+
+.even-sidebar-inner.menu {
+  border-top: 1px solid #fff;
+}
+
+.even-sidebar-item {
+  width: 240px;
+  display: flex;
+}
+
+.even-sidebar-menu {
+  margin: 12px 0;
+  font-size: 20px;
+}
+
+.items {
+  width: 24px;
+  height: 24px; 
+  color: white;
+  margin-right: 24px;
+}
+
+.sidebar-text {
+  width: 200px;
+  padding: 5px 0;
+}
+
+/* 위에서부터 순서대로 아이콘 배치 */
+.icon-1 {
+  background-image: url(/youtube/icons/1.\ Home.png);
+}
+
+.icon-2 {
+  background-image: url(/youtube/icons/2.\ Shorts.png);
+}
+
+.icon-3 {
+  background-image: url(/youtube/icons/3.\ Subscribe.png);
+}
+
+.icon-4 {
+  background-image: url(/youtube/icons/4.\ Watching.png);
+}
+
+.icon-5 {
+  background-image: url(/youtube/icons/5.\ Playlist.png);
+}
+
+.icon-6 {
+  background-image: url(/youtube/icons/6.\ My_video.png);
+}
+
+.icon-7 {
+  background-image: url(/youtube/icons/7.\ Watch_later.png);
+}
+
+.icon-8 {
+  background-image: url(/youtube/icons/8.\ Liker_video.png);
+}
