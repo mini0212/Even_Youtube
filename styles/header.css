@@ -1,12 +1,18 @@
 .header {
-	height: 65px;
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 100;
+}
+
+.header-container {
+	height: 65px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
 	/* background-color: black; */
 	border-bottom: 1px solid black;
@@ -144,4 +150,10 @@
 
 .user-profile-img {
 	height: 32px;
+}
+
+/* navbar */
+.navbar-menu {
+	display: flex;
+	align-items: center;
 }
