@@ -157,3 +157,20 @@
 	display: flex;
 	align-items: center;
 }
+
+.navbar-item {
+	list-style: none;
+	border: none;
+	background-color: #333;
+	color: white;
+    margin: 0 4px;
+	border-radius: 8px;
+	padding: 8px 12px;
+	font-size: 1rem;
+	font-weight: 500;
+	cursor: pointer; 
+	transition : background-color 0.25s;
+}
+.navbar-item:hover {
+	background-color: #737373;
+}
