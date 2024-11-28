@@ -29,28 +29,74 @@
 }
 
 .middle-section {
-	flex: 1px;
-	max-width: 500px;
-	align-items: center;
 	display: flex;
-	
+	align-items: center;
+	max-width: 660px;
+	margin: 0 60px;
+	flex: 1;
+}
+
+.search-bar-container {
+	display: flex;
+	align-items: center;
+	max-width: 600px;
+	height: 44px;
+	border: 1px solid #333;
+	border-radius: 50px;
+	flex: 1;
+}
+
+.search-icon {
+	padding: 10px;
+}
+
+.search-bar-input-container {
+	display: flex;
+	align-items: center;
+	padding: 0;
+	flex: 1;
+}
+.search-bar-container input {
+	flex: 1;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	font-size: 18px;
 }
 
 .search-btn {
-	height: 40px;
-	width: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	height: 46px;
+	width: 64px;
+	border-radius: 0 40px 40px 0;
+	border: none;
+	background-color: #333;
+	padding: 16px;
+	cursor: pointer;
 }
 
-.search-btn,
-.voice-search-btn,
+.voice-search-btn {
+	height: 48px;
+	height: 48px;
+	border-radius: 50%;
+	border: none;
+	background-color: #333;
+	margin: 12px;
+	padding: 12px;
+	cursor: pointer;
+}
+
+/* TODO: 버튼 호버링시 색상 변경 필요 */
 .upload-icon-container,
-.notification-icon-container{
+.notification-icon-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: relative;
 }
-
 
 .search-btn .tooltip,
 .voice-search-btn .tooltip,
@@ -63,7 +109,7 @@
 	border-radius: 4px;
 	bottom: -50px;
 	opacity: 0;
-	transition:  opacity 0.5s;
+	transition: opacity 0.5s;
 	white-space: nowrap;
 	font-size: 13px;
 }
@@ -71,19 +117,15 @@
 .search-btn:hover .tooltip,
 .voice-search-btn:hover .tooltip,
 .upload-icon-container:hover .tooltip,
-.notification-icon-container:hover .tooltip{
+.notification-icon-container:hover .tooltip {
 	opacity: 0.8;
 }
-
-
-
-
 
 .right-section {
 	width: 150px;
 	margin-right: 20px;
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 	justify-content: space-between;
 }
 
@@ -91,6 +133,7 @@
 	position: relative;
 }
 
+/* TODO: icon -> button으로 변경하기 */
 .upload-icon {
 	height: 24px;
 	cursor: pointer;
@@ -98,6 +141,7 @@
 .notification-icon {
 	height: 24px;
 }
+
 .user-profile-img {
 	height: 32px;
 }
