@@ -1,12 +1,18 @@
 .header {
-	height: 65px;
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 100;
+}
+
+.header-container {
+	height: 65px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
 	/* background-color: black; */
 	border-bottom: 1px solid black;
@@ -144,4 +150,27 @@
 
 .user-profile-img {
 	height: 32px;
+}
+
+/* navbar */
+.navbar-menu {
+	display: flex;
+	align-items: center;
+}
+
+.navbar-item {
+	list-style: none;
+	border: none;
+	background-color: #333;
+	color: white;
+    margin: 0 4px;
+	border-radius: 8px;
+	padding: 8px 12px;
+	font-size: 1rem;
+	font-weight: 500;
+	cursor: pointer; 
+	transition : background-color 0.25s;
+}
+.navbar-item:hover {
+	background-color: #737373;
 }
