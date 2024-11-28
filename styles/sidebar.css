@@ -1,0 +1,192 @@
+/* 사이드바 기본 (확장) */
+.even-sidebar-header {
+  width: 240px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.even-sidebar-section{
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 12px;
+}
+
+.even-sidebar-inner {
+  padding: 12px;
+}
+
+.even-sidebar-inner.menu {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.even-sidebar-menu {
+  width: 240px;
+  height: 40px;
+  margin: 6px 0;
+  font-size: 16px;
+  align-content: center;
+}
+
+.even-sidebar-menu:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.even-sidebar-menu:active {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.even-sidebar-item {
+  width: 240px;
+  display: flex;
+  cursor: pointer;
+  margin: 6px 0;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.even-sidebar-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.even-sidebar-item:active {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.items {
+  width: 26px;
+  height: 24px; 
+  color: white;
+  margin-right: 24px;
+}
+
+.sidebar-text {
+  width: 200px;
+  padding: 5px 0;
+}
+
+/* 위에서부터 순서대로 아이콘 배치 */
+.sidebar-toggle {
+  background-image: url(/icons/0.\ toggle.png);
+}
+
+.sidebar-logo {
+  width: 93px;
+  height: 20px;
+  background-image: url(/logo.png);
+  background-size: cover;
+}
+
+.country-code {
+  height: 44px;
+  margin: 12px 0 0 -10px;
+  font-size: 10px;
+}
+
+.icon-1 {
+  background-image: url(/icons/1.\ Home.png);
+}
+
+.icon-2 {
+  background-image: url(/icons/2.\ Shorts.png);
+}
+
+.icon-3 {
+  background-image: url(/icons/3.\ Subscribe.png);
+}
+
+.icon-4 {
+  background-image: url(/icons/4.\ Watching.png);
+}
+
+.icon-5 {
+  background-image: url(/icons/5.\ Playlist.png);
+}
+
+.icon-6 {
+  background-image: url(/icons/6.\ My_video.png);
+}
+
+.icon-7 {
+  background-image: url(/icons/7.\ Watch_later.png);
+}
+
+.icon-8 {
+  background-image: url(/icons/8.\ Liker_video.png);
+}
+
+.icon-9 {
+  background-image: url(/icons/9.\ Trending.png);
+}
+
+.icon-10 {
+  background-image: url(/icons/10.\ Shopping.png);
+}
+
+.icon-11 {
+  background-image: url(/icons/11.\ Music.png);
+}
+
+.icon-12 {
+  background-image: url(/icons/12.\ Movies.png);
+}
+
+.icon-13 {
+  background-image: url(/icons/13.\ Live.png);
+}
+
+.icon-14 {
+  background-image: url(/icons/14.\ Gaming.png);
+}
+
+.icon-15 {
+  background-image: url(/icons/15.\ News.png);
+}
+
+.icon-16 {
+  background-image: url(/icons/16.\ Educate.png);
+  background-size: cover;
+}
+
+.icon-17 {
+  background-image: url(/icons/17.\ Podcasts.png);
+}
+
+.icon-18 {
+  background-image: url(/icons/18.\ Youtube_Premium.png);
+}
+
+.icon-19 {
+  background-image: url(/icons/19.\ YouTube_Studio.png);
+}
+
+.icon-20 {
+  background-image: url(/icons/20.\ Youtube_Music.png);
+}
+
+.icon-21 {
+  background-image: url(/icons/21.Youtube_Kids.png);
+}
+
+.icon-22 {
+  background-image: url(/icons/22.\ Setting.png);
+}
+
+.icon-23 {
+  background-image: url(/icons/23.\ Report_history.png);
+}
+
+.icon-24 {
+  background-image: url(/icons/24.\ Help.png);
+}
+
+.icon-25 {
+  background-image: url(/icons/25.\ Support.png);
+}
+
