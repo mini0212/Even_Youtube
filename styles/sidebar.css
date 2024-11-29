@@ -1,3 +1,8 @@
+/* 미니 사이드바 작업을 위한 디스플레이 히든 */
+.even-sidebar {
+	display: none;
+}
+
 /* 사이드바 기본 (확장) */
 .even-sidebar-container {
 	width: 240px;
@@ -277,4 +282,77 @@
 	overflow-wrap: break-word;
 	word-wrap: break-word;
 	max-width: 150px;
+}
+
+/* 미니 사이드바 */
+
+.even-mini-sidebar {
+	width: 72px;
+}
+
+.even-mini-sidebar-btns {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 0;
+	padding: 0;
+}
+
+.even-mini-sidebar-btn {
+	position: relative;
+	width: 64px;
+	height: 44px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap: 6.5px;
+	border: none;
+	border-radius: 15px;
+	padding: 16px 0 14px;
+	font-size: 10px;
+	text-decoration: none;
+	color: white;
+	background-color: transparent; /* 기본 배경색 */
+  transition: background-color 0.5s ease; /* 기본 상태로 돌아가는 부드러운 전환 */
+	overflow: visible;
+}
+
+.even-mini-sidebar-btn span {
+	pointer-events: none; /* 내부 텍스트는 클릭 이벤트 비활성화 */
+}
+
+.even-mini-sidebar-btn:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+	transition: background-color 0.5s ease;
+
+}
+
+/* 가상 요소: 클릭 시 추가되는 레이어 */
+.even-mini-sidebar-btn::after {
+	content: ''; /* 가상 요소 생성 */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.1); /* 버튼 색상 + 투명도 */
+	opacity: 0; /* 기본 상태에서는 보이지 않음 */
+	transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
+	z-index: 1; /* 레이어가 버튼 위에 나타나도록 */
+	border-radius: 0;
+}
+
+/* 클릭 시 레이어 활성화 */
+.even-mini-sidebar-btn:active::after {
+	opacity: 1; /* 클릭 시 레이어가 나타남 */
+	transition: opacity 0.1s ease-in; /* 빠르게 나타남 */
+}
+
+
+
+/* 클릭 후 원래 상태로 돌아가기 */
+.even-mini-sidebar-btn:focus:not(:hover)::after {
+	opacity: 0; /* 다시 보이지 않게 설정 */
+	transition: opacity 0.5s ease-out; /* 부드럽게 사라짐 */
 }
