@@ -1,0 +1,157 @@
+/* 사이드바 기본 (확장) */
+.even-sidebar-container {
+	padding: 0px;
+	margin: 0px;
+	width: 240px; 
+}
+
+/* section */
+.even-sidebar-section{
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+}
+
+.even-sidebar-inner {
+  padding: 0 12px;
+}
+
+.even-sidebar-inner.menu {
+  border-top: 1px solid #fff;
+}
+
+.even-sidebar-item {
+  width: 240px;
+  display: flex;
+}
+
+.even-sidebar-menu {
+  margin: 12px 0;
+  font-size: 20px;
+}
+
+.items {
+  width: 24px;
+  height: 24px; 
+  color: white;
+  margin-right: 24px;
+}
+
+.sidebar-text {
+  width: 200px;
+  padding: 5px 0;
+}
+
+/* 위에서부터 순서대로 아이콘 배치 */
+.icon-1 {
+  background-image: url(/icons/1.\ Home.png);
+}
+
+.icon-2 {
+  background-image: url(/icons/2.\ Shorts.png);
+}
+
+.icon-3 {
+  background-image: url(/icons/3.\ Subscribe.png);
+}
+
+.icon-4 {
+  background-image: url(/icons/4.\ Watching.png);
+}
+
+.icon-5 {
+  background-image: url(/icons/5.\ Playlist.png);
+}
+
+.icon-6 {
+  background-image: url(/icons/6.\ My_video.png);
+}
+
+.icon-7 {
+  background-image: url(/icons/7.\ Watch_later.png);
+}
+
+.icon-8 {
+  background-image: url(/icons/8.\ Liker_video.png);
+}
+
+
+/* footer */
+
+.even-sidebar-footer {
+	padding-left: 20px;
+	margin-top: 20px;
+	width: 205px;
+	
+}
+
+.even-sidebar-footer-info {
+	display:flex;
+	flex-wrap: wrap;
+	column-gap: 5px;
+	align-content: flex-start;
+	margin-bottom: 15px;
+}
+
+.even-sidebar-footer-info-btn {
+	padding: 1px 0.5px;
+	border: none;
+	background-color: transparent;
+	color: rgb(176, 176, 176);
+	font-size: 12.5px;
+	font-weight: 600;
+	letter-spacing: 0.3px;
+}
+
+
+.even-sidebar-footer-termpolicy {
+	display:flex;
+	flex-wrap: wrap;
+	column-gap: 5px;
+	align-content: flex-start;
+	margin-bottom: 15px;
+	width: 150px;
+}
+
+.even-sidebar-footer-termpolicy-btn {
+	padding: 0.5px 2px;
+	border: none;
+	background-color: transparent;
+	color: rgb(176, 176, 176);
+	font-size: 12.5px;
+	font-weight: 600;
+	letter-spacing: 0.3px;
+}
+
+
+
+.even-sidebar-footer-copyright {
+	padding: 1px 2px;
+	color: rgb(122, 122, 122);
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 17px;
+	letter-spacing: 0.1px;
+	width: 197px;
+}
+
+.even-sidebar-footer-copyright p {
+	white-space: normal; /* 줄바꿈 허용 */
+	overflow-wrap: break-word; /* 긴 단어 줄바꿈 */
+	margin: 0;
+}
+
+.even-sidebar-footer-copyright-btn {
+	all: unset;
+	display: inline;
+	font-size: inherit;
+  font-family: inherit;
+	padding: 1px 2px;
+	border: none;
+	background-color: transparent;
+	color: rgb(11, 180, 253);
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	max-width: 150px;
+}
