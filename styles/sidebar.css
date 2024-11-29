@@ -4,31 +4,58 @@
 } */
 
 /* 사이드바 기본 (확장) */
+.even-sidebar{
+	width:200px;
+}
 .even-sidebar-container {
-	width: 240px;
-	height: 56px;
+	width: 200px;
 	display: flex;
 	align-items: center;
-	padding: 0 24px;
+	padding-right: 60px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+/* 사이드바 스크롤 */
+::-webkit-scrollbar {
+	background: #0f0f0f;
+	width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #0f0f0f;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb:focus {
+	background: rgba(255, 255, 255, 0.5);
 }
 
 /* section */
 .even-sidebar-section {
 	display: flex;
 	flex-direction: column;
-	padding: 0 12px;
+	padding: 0 4px;
 }
 
 .even-sidebar-inner {
-	padding: 0 12px;
+	padding: 0 20px;
 }
 
 .even-sidebar-inner.menu {
-	border-top: 1px solid #fff;
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.even-sidebar-inner.menu-bottom {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	padding: 10px 20px;
 }
 
 .even-sidebar-menu {
-	width: 240px;
+	width: 200px;
 	height: 40px;
 	margin: 6px 0;
 	font-size: 16px;
@@ -46,7 +73,7 @@
 }
 
 .even-sidebar-item {
-	width: 240px;
+	width: 200px;
 	display: flex;
 	cursor: pointer;
 	margin: 6px 0;
@@ -70,7 +97,7 @@
 }
 
 .items {
-	width: 24px;
+	width: 36px;
 	height: 24px;
 	color: white;
 	margin-right: 24px;
@@ -101,104 +128,104 @@
 }
 
 .icon-1 {
-	background-image: url(/icons/1.\ Home.png);
+	background-image: url(/assets/icons/1.\ Home.png);
 }
 
 .icon-2 {
-	background-image: url(/icons/2.\ Shorts.png);
+	background-image: url(/assets/icons/2.\ Shorts.png);
 }
 
 .icon-3 {
-	background-image: url(/icons/3.\ Subscribe.png);
+	background-image: url(/assets/icons/3.\ Subscribe.png);
 }
 
 .icon-4 {
-	background-image: url(/icons/4.\ Watching.png);
+	background-image: url(/assets/icons/4.\ Watching.png);
 }
 
 .icon-5 {
-	background-image: url(/icons/5.\ Playlist.png);
+	background-image: url(/assets/icons/5.\ Playlist.png);
 }
 
 .icon-6 {
-	background-image: url(/icons/6.\ My_video.png);
+	background-image: url(/assets/icons/6.\ My_video.png);
 }
 
 .icon-7 {
-	background-image: url(/icons/7.\ Watch_later.png);
+	background-image: url(/assets/icons/7.\ Watch_later.png);
 }
 
 .icon-8 {
-	background-image: url(/icons/8.\ Liker_video.png);
+	background-image: url(/assets/icons/8.\ Liker_video.png);
 }
 
 .icon-9 {
-	background-image: url(/icons/9.\ Trending.png);
+	background-image: url(/assets/icons/9.\ Trending.png);
 }
 
 .icon-10 {
-	background-image: url(/icons/10.\ Shopping.png);
+	background-image: url(/assets/icons/10.\ Shopping.png);
 }
 
 .icon-11 {
-	background-image: url(/icons/11.\ Music.png);
+	background-image: url(/assets/icons/11.\ Music.png);
 }
 
 .icon-12 {
-	background-image: url(/icons/12.\ Movies.png);
+	background-image: url(/assets/icons/12.\ Movies.png);
 }
 
 .icon-13 {
-	background-image: url(/icons/13.\ Live.png);
+	background-image: url(/assets/icons/13.\ Live.png);
 }
 
 .icon-14 {
-	background-image: url(/icons/14.\ Gaming.png);
+	background-image: url(/assets/icons/14.\ Gaming.png);
 }
 
 .icon-15 {
-	background-image: url(/icons/15.\ News.png);
+	background-image: url(/assets/icons/15.\ News.png);
 }
 
 .icon-16 {
-	background-image: url(/icons/16.\ Educate.png);
+	background-image: url(/assets/icons/16.\ Educate.png);
 	background-size: cover;
 }
 
 .icon-17 {
-	background-image: url(/icons/17.\ Podcasts.png);
+	background-image: url(/assets/icons/17.\ Podcasts.png);
 }
 
 .icon-18 {
-	background-image: url(/icons/18.\ Youtube_Premium.png);
+	background-image: url(/assets/icons/18.\ Youtube_Premium.png);
 }
 
 .icon-19 {
-	background-image: url(/icons/19.\ YouTube_Studio.png);
+	background-image: url(/assets/icons/19.\ YouTube_Studio.png);
 }
 
 .icon-20 {
-	background-image: url(/icons/20.\ Youtube_Music.png);
+	background-image: url(/assets/icons/20.\ Youtube_Music.png);
 }
 
 .icon-21 {
-	background-image: url(/icons/21.Youtube_Kids.png);
+	background-image: url(/assets/icons/21.Youtube_Kids.png);
 }
 
 .icon-22 {
-	background-image: url(/icons/22.\ Setting.png);
+	background-image: url(/assets/icons/22.\ Setting.png);
 }
 
 .icon-23 {
-	background-image: url(/icons/23.\ Report_history.png);
+	background-image: url(/assets/icons/23.\ Report_history.png);
 }
 
 .icon-24 {
-	background-image: url(/icons/24.\ Help.png);
+	background-image: url(/assets/icons/24.\ Help.png);
 }
 
 .icon-25 {
-	background-image: url(/icons/25.\ Support.png);
+	background-image: url(/assets/icons/25.\ Support.png);
 }
 
 
