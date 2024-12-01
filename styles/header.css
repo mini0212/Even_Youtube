@@ -83,7 +83,6 @@
 	outline: none;
 	font-size: 18px;
 	flex: 1;
-	flex-basis: 0.000000001px;
 	padding-left: 20px;
 }
 
@@ -215,27 +214,4 @@ button:hover #tooltip {
 }
 .navbar-item:hover {
 	background-color: #737373;
-}
-
-/* media query */
-@media (max-width: 656px) {
-	.middle-section {
-		display: none;
-	}
-
-	#search-button,
-	#voice-search-button {
-		display: flex;
-	}
-}
-
-@media (min-width: 657px) {
-	.middle-section {
-		display: flex;
-	}
-
-	#search-button,
-	#voice-search-button {
-		display: none;
-	}
 }
