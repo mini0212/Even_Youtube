@@ -200,3 +200,16 @@ button:hover #tooltip {
 .navbar-item:hover {
 	background-color: #737373;
 }
+
+/* media query */
+@media (max-width: 656px) {
+	.middle-section {
+		display: none;
+	}
+}
+
+@media (min-width: 657px) {
+	.middle-section {
+		display: flex;
+	}
+}
