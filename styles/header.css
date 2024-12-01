@@ -16,6 +16,7 @@
 
 	/* background-color: black; */
 	border-bottom: 1px solid black;
+	padding: 0 16px;
 }
 
 .left-section {
@@ -25,13 +26,14 @@
 
 .header-menu {
 	height: 24px;
-	margin: 0 24px;
 }
 
 .header-logo {
 	width: auto;
-	height: 65px;
-	margin-left: -40px;
+	height: 56px;
+	width: 131px;
+	object-fit: fill;
+	margin-left: -10px;
 }
 
 /* Middle Section */
@@ -40,7 +42,8 @@
 	justify-content: center;
 	align-items: center;
 	max-width: 660px;
-	flex: 1;
+	margin: 0 32px;
+	flex: 1 1 auto;
 }
 
 .search-bar-container {
@@ -80,9 +83,11 @@
 	outline: none;
 	font-size: 18px;
 	flex: 1;
+	flex-basis: 0.000000001px;
 	padding-left: 20px;
 }
 
+/* focus-within */
 .search-bar-container:focus-within {
 	margin-left: 0;
 }
@@ -92,7 +97,7 @@
 }
 
 .search-bar-container:focus-within .search-bar__input-icon {
-	display: inline-flex;
+	display: flex;
 }
 
 .search-bar-container:focus-within .search-bar__input {
@@ -124,27 +129,18 @@
 	border-radius: 50%;
 	border: none;
 	background-color: #333;
-	margin-left: 12px;
+	margin-left: 8px;
 	padding: 12px;
 	cursor: pointer;
 }
 
-/* TODO: 버튼 호버링시 색상 변경 필요 */
-.upload-icon-container,
-.notification-icon-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-}
-
+/* Right Section */
 .right-section {
 	display: flex;
-	margin-right: 20px;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: center;
 	justify-content: space-between;
-	gap: 8px;
+	gap: 4px;
 }
 
 .right-button {
@@ -154,9 +150,18 @@
 	align-items: center;
 	height: 40px;
 	width: 40px;
-	border: 1px solid black;
+	border: none;
+	background-color: transparent;
 	border-radius: 50%;
 	cursor: pointer;
+}
+
+#search-button:hover,
+#voice-search-button:hover,
+#upload-button:hover,
+#notification-button:hover {
+	background-color: #737373;
+	transition: background-color 0.3s;
 }
 
 /* tooltip */
@@ -206,10 +211,20 @@ button:hover #tooltip {
 	.middle-section {
 		display: none;
 	}
+
+	#search-button,
+	#voice-search-button {
+		display: flex;
+	}
 }
 
 @media (min-width: 657px) {
 	.middle-section {
 		display: flex;
+	}
+
+	#search-button,
+	#voice-search-button {
+		display: none;
 	}
 }
