@@ -139,28 +139,24 @@
 }
 
 .right-section {
-	width: 150px;
-	margin-right: 20px;
 	display: flex;
+	margin-right: 20px;
+	justify-content: center;
 	align-items: center;
 	justify-content: space-between;
+	gap: 8px;
 }
 
-.notification-icon-container {
+.right-button {
 	position: relative;
-}
-
-/* TODO: icon -> button으로 변경하기 */
-.upload-icon {
-	height: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	width: 40px;
+	border: 1px solid black;
+	border-radius: 50%;
 	cursor: pointer;
-}
-.notification-icon {
-	height: 24px;
-}
-
-.user-profile-img {
-	height: 32px;
 }
 
 /* tooltip */

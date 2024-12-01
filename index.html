@@ -14,40 +14,44 @@
 	<body>
 		<header class="header">
 			<div class="header-container">
-			<div class="left-section">
-				<img class="header-menu" src="./assets/icons/menu.png" />
-				<img class="header-logo" src="./assets/icons/logo.png" />
-			</div>
-			<div class="middle-section">
-				<div class="search-bar-container">
-					<div class="search-bar-input-container">
-						<img class="search-bar__input-icon" src="./assets/icons/search.png" />
-						<input class="search-bar__input" type="text" placeholder="검색" />
+				<div class="left-section">
+					<img class="header-menu" src="./assets/icons/menu.png" />
+					<img class="header-logo" src="./assets/icons/logo.png" />
+				</div>
+				<div class="middle-section">
+					<div class="search-bar-container">
+						<div class="search-bar-input-container">
+							<img
+								class="search-bar__input-icon"
+								src="./assets/icons/search.png" />
+							<input class="search-bar__input" type="text" placeholder="검색" />
+						</div>
+						<button class="search-btn">
+							<img class="search-icon" src="./assets/icons/search.png" />
+							<div id="tooltip">검색</div>
+						</button>
 					</div>
-					<button class="search-btn">
-						<img class="search-icon" src="./assets/icons/search.png" />
-						<div id="tooltip">검색</div>
+					<button class="voice-search-btn">
+						<img class="voice-search-btn-icon" src="./assets/icons/voice.png" />
+						<div id="tooltip">음성으로 검색</div>
 					</button>
 				</div>
-				<button class="voice-search-btn">
-					<img class="voice-search-btn-icon" src="./assets/icons/voice.png" />
-					<div id="tooltip">음성으로 검색</div>
-				</button>
-			</div>
-			<div class="right-section">
-				<div class="upload-icon-container">
-					<img class="upload-icon" src="assets/icons/add-video.png">
-					<div id="tooltip">만들기</div>
-				</div>
-				<div class="notification-icon-container">
-                    <img class="notification-icon" src="assets/icons/notification.png">
-					<div id="tooltip">알림</div>
-                </div>
-				<div class="user-profile-container">
-					<img class="user-profile-img" src="assets/icons/profile.png" />
+				<div class="right-section">
+					<button id="upload-button" class="right-button">
+						<img class="right-button-icon" src="assets/icons/add-video.png" />
+						<div id="tooltip">만들기</div>
+					</button>
+					<button id="notification-button" class="right-button">
+						<img
+							class="right-button-icon"
+							src="assets/icons/notification.png" />
+						<div id="tooltip">알림</div>
+					</button>
+					<button id="user-profile-button" class="right-button">
+						<img class="user-profile-img" src="assets/icons/profile.png" />
+					</button>
 				</div>
 			</div>
-		</div>
 			<div class="navbar-container">
 				<ul class="navbar-menu">
 					<li class="navbar-item">전체</li>
@@ -60,7 +64,7 @@
 					<li class="navbar-item">반려동물</li>
 					<li class="navbar-item">요리</li>
 				</ul>
-				</div>
+			</div>
 		</header>
 	</body>
 </html>
