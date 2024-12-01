@@ -33,57 +33,54 @@ function handleResize() {
 
 	if (isSearchClicked) {
 		if (screen428) {
-			rightSectionButtons.forEach((button) => {
-				button.style.display = 'none';
-			});
+			handleButtonsHidden([]);
 		} else if (screen656) {
-			rightSectionButtons.forEach((button) => {
-				if (button.id === 'voice-search-button') {
-					button.style.display = 'flex';
-				} else {
-					button.style.display = 'none';
-				}
-			});
+			handleButtonsHidden(['voice-search-button']);
 		}
 		return;
 	}
-	console.log(screen428, screen656, screen657);
+
 	if (screen428) {
 		leftSection[0].style.display = 'flex';
 		middleSection[0].style.display = 'none';
 		middleVoiceButton.style.display = 'flex';
-		rightSectionButtons.forEach((button) => {
-			if (
-				button.id === 'voice-search-button' ||
-				button.id === 'notification-button'
-			) {
-				button.style.display = 'none';
-			} else {
-				button.style.display = 'flex';
-			}
-		});
+		handleButtonsHidden([
+			'search-button',
+			'upload-button',
+			'user-profile-button',
+		]);
 	} else if (screen656) {
 		leftSection[0].style.display = 'flex';
 		middleSection[0].style.display = 'none';
 		middleVoiceButton.style.display = 'flex';
-		rightSectionButtons.forEach((button) => {
-			button.style.display = 'flex';
-		});
+		handleButtonsHidden([
+			'search-button',
+			'voice-search-button',
+			'upload-button',
+			'notification-button',
+			'user-profile-button',
+		]);
 	} else if (screen657) {
 		leftSection[0].style.display = 'flex';
 		middleSection[0].style.display = 'flex';
 		middleVoiceButton.style.display = 'flex';
-		rightSectionButtons.forEach((button) => {
-			if (
-				button.id === 'search-button' ||
-				button.id === 'voice-search-button'
-			) {
-				button.style.display = 'none';
-			} else {
-				button.style.display = 'flex';
-			}
-		});
+		handleButtonsHidden([
+			'upload-button',
+			'notification-button',
+			'user-profile-button',
+		]);
 	}
+}
+
+// 보여지는 버튼 핸들링
+function handleButtonsHidden(buttonsID) {
+	rightSectionButtons.forEach((button) => {
+		if (buttonsID.includes(button.id)) {
+			button.style.display = 'flex';
+		} else {
+			button.style.display = 'none';
+		}
+	});
 }
 
 // 초기 화면 크기 확인 및 설정
