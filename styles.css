@@ -1,0 +1,153 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  #video-grid {
+    display: grid;
+    gap: 16px;
+    padding: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Responsive layout */
+  @media (max-width: 600px) {
+    #video-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 1024px) {
+    #video-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    #video-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Video item styles */
+  .video-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    aspect-ratio: 16 / 9; /* 동영상 비율 고정 */
+  }
+  
+  .video-item:hover {
+    transform: scale(1.05); /* Hover 효과로 확대 */
+  }
+  
+  .video-item img,
+  .video-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .video-item video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .video-item:hover video {
+    opacity: 1; /* Hover 시 동영상 재생 */
+  }
+  
+  .video-info {
+    margin-top: 8px;
+    font-size: 14px;
+  }
+  
+  .video-title {
+    font-weight: bold;
+  }
+  
+  .video-author {
+    font-size: 12px;
+    color: #555;
+  }
+  
+  .video-stats {
+    font-size: 12px;
+    color: #999;
+  }
+
+  /* 동영상 카드 스타일 */
+.video-item {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .video-item:hover {
+    transform: scale(1.05);
+  }
+  
+  /* 썸네일 행 스타일 */
+  .thumbnail-row {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+  }
+  
+  .thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .video-time {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 2px 5px;
+    font-size: 12px;
+    border-radius: 3px;
+  }
+  
+  /* 동영상 정보 스타일 */
+  .video-info {
+    padding: 10px;
+  }
+  
+  .video-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .video-author {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .video-stats {
+    font-size: 12px;
+    color: #999;
+  }
