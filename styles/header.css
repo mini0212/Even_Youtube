@@ -37,6 +37,7 @@
 /* Middle Section */
 .middle-section {
 	display: flex;
+	justify-content: center;
 	align-items: center;
 	max-width: 660px;
 	flex: 1;
@@ -100,6 +101,7 @@
 }
 
 .search-btn {
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -114,12 +116,15 @@
 }
 
 .voice-search-btn {
+	position: relative;
+	display: flex;
+	justify-content: center;
 	height: 48px;
-	height: 48px;
+	width: 48px;
 	border-radius: 50%;
 	border: none;
 	background-color: #333;
-	margin: 12px;
+	margin-left: 12px;
 	padding: 12px;
 	cursor: pointer;
 }
@@ -140,21 +145,22 @@
 	position: absolute;
 	background-color: #737373;
 	color: white;
-	padding: 7px 9px 7px 9px;
+	padding: 8px 6px;
 	border-radius: 4px;
 	bottom: -50px;
 	opacity: 0;
 	transition: opacity 0.5s;
 	white-space: nowrap;
-	font-size: 13px;
+	font-size: 12px;
+	font-weight: 400px;
 }
 
 .search-btn:hover .tooltip,
 .voice-search-btn:hover .tooltip,
 .upload-icon-container:hover .tooltip,
 .notification-icon-container:hover .tooltip {
-	opacity: 0.8;
-}
+	opacity: 0.8; 
+} 
 
 .right-section {
 	width: 150px;
@@ -192,13 +198,13 @@
 	border: none;
 	background-color: #333;
 	color: white;
-    margin: 0 4px;
+	margin: 0 4px;
 	border-radius: 8px;
 	padding: 8px 12px;
 	font-size: 1rem;
 	font-weight: 500;
-	cursor: pointer; 
-	transition : background-color 0.25s;
+	cursor: pointer;
+	transition: background-color 0.25s;
 }
 .navbar-item:hover {
 	background-color: #737373;
