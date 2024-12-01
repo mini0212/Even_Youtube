@@ -138,30 +138,6 @@
 	position: relative;
 }
 
-.search-btn .tooltip,
-.voice-search-btn .tooltip,
-.upload-icon-container .tooltip,
-.notification-icon-container .tooltip {
-	position: absolute;
-	background-color: #737373;
-	color: white;
-	padding: 8px 6px;
-	border-radius: 4px;
-	bottom: -50px;
-	opacity: 0;
-	transition: opacity 0.5s;
-	white-space: nowrap;
-	font-size: 12px;
-	font-weight: 400px;
-}
-
-.search-btn:hover .tooltip,
-.voice-search-btn:hover .tooltip,
-.upload-icon-container:hover .tooltip,
-.notification-icon-container:hover .tooltip {
-	opacity: 0.8; 
-} 
-
 .right-section {
 	width: 150px;
 	margin-right: 20px;
@@ -185,6 +161,25 @@
 
 .user-profile-img {
 	height: 32px;
+}
+
+/* tooltip */
+#tooltip {
+	position: absolute;
+	background-color: #737373;
+	color: white;
+	padding: 8px 6px;
+	border-radius: 4px;
+	bottom: -50px;
+	opacity: 0;
+	transition: opacity 0.5s;
+	white-space: nowrap;
+	font-size: 12px;
+	font-weight: 400px;
+}
+
+button:hover #tooltip {
+	opacity: 0.8;
 }
 
 /* navbar */
