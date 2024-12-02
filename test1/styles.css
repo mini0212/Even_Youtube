@@ -1,0 +1,115 @@
+/* 전체 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF0000;
+    color: white;
+    padding: 10px 20px;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.search-bar input {
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+.search-bar button {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    background-color: white;
+    color: #FF0000;
+    border-radius: 4px;
+    cursor: pointer;
+}
+main {
+    padding: 20px;
+    background-color: #F9F9F9;
+}
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.video-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+.video-card video {
+    width: 100%;
+    height: auto;
+}
+.video-info {
+    padding: 10px;
+}
+.video-info h3 {
+    font-size: 18px;
+    margin: 0 0 5px;
+}
+.video-info .channel-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #606060;
+}
+.video-info .meta-info {
+    font-size: 12px;
+    color: gray;
+}
+/* 호버 효과 */
+.video-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.video-card:hover video {
+    transition: none;
+    animation: play-hover 0.5s forwards;
+}
+/* 푸터 */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #202020;
+    color: white;
+}
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .search-bar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+    .video-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+@media (max-width: 480px) {
+    .video-info h3 {
+        font-size: 16px;
+    }
+    .video-info .channel-name {
+        font-size: 12px;
+    }
+    .video-info .meta-info {
+        font-size: 10px;
+    }
+}

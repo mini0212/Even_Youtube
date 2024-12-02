@@ -1,16 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Even_Youtube</title>
-		<link rel="stylesheet" href="/styles/general.css" />
-		<link rel="stylesheet" href="/styles/header.css" />
-		<link rel="stylesheet" href="/styles/main.css" />
-		<link rel="stylesheet" href="/styles/sidebar.css" />
-		<link rel="stylesheet" href="/styles/video.css" />
-	</head>
-	<body>
-		<!-- test -->
-	</body>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>무한 스크롤 비디오 그리드</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <!-- 좌측 고정 사이드바 -->
+      <aside class="sidebar">
+        <div class="sidebar-header">메뉴</div>
+        <ul class="sidebar-menu">
+          <li>홈</li>
+          <li>인기</li>
+          <li>구독</li>
+          <li>나중에 보기</li>
+          <li>설정</li>
+        </ul>
+      </aside>
+      <!-- 메인 콘텐츠 영역 -->
+      <div class="main-content">
+        <!-- 상단 고정 헤더 -->
+        <header>
+          <div class="logo">비디오 플랫폼</div>
+          <div class="search-bar">
+            <input type="text" placeholder="검색어를 입력하세요..." />
+            <button>검색</button>
+          </div>
+        </header>
+        <!-- 비디오 그리드 -->
+        <main id="scroll-container">
+          <div id="video-grid" class="video-grid">
+            <!-- 비디오 카드가 JavaScript로 동적으로 생성됩니다 -->
+          </div>
+        </main>
+        <!-- 하단 푸터 -->
+        <footer>&copy; 2024 비디오 플랫폼</footer>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>

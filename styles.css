@@ -1,0 +1,175 @@
+/* 전체 레이아웃 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    height: 100vh; /* 전체 화면 높이 */
+    overflow: hidden; /* 전체 화면에서 스크롤 막기 */
+}
+
+.layout {
+    display: flex;
+    width: 100%; /* 화면 전체 너비 */
+}
+
+/* 사이드바 */
+.sidebar {
+    width: 250px;
+    background-color: #202020;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* 화면 전체 높이 */
+    position: fixed; /* 화면 좌측에 고정 */
+    top: 0;
+    left: 0;
+    overflow-y: auto; /* 사이드바 스크롤 허용 */
+    transition: width 0.3s ease; /* 너비 변화 애니메이션 */
+}
+
+.sidebar-header {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    background-color: #333333;
+    border-bottom: 1px solid #444444;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sidebar-menu li:hover {
+    background-color: #444444;
+}
+
+/* 메인 콘텐츠 */
+.main-content {
+    margin-left: 250px; /* 사이드바 공간 확보 */
+    width: calc(100% - 250px); /* 남은 화면 너비 사용 */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden; /* 메인 콘텐츠 자체 스크롤 허용 */
+    transition: margin-left 0.3s ease, width 0.3s ease; /* 애니메이션 추가 */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    color: white;
+    /* padding: 10px 20px; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: fixed; /* 화면 상단에 고정 */
+    top: 0;
+    left: 250px; /* 사이드바 공간 확보 */
+    width: calc(100% - 250px); /* 남은 화면 너비 사용 */
+    z-index: 1000; /* 다른 요소 위에 표시 */
+    transition: left 0.3s ease, width 0.3s ease; /* 애니메이션 추가 */
+}
+
+main {
+    margin-top: 60px; /* 고정된 헤더 아래에서 시작 */
+    padding: 20px;
+    overflow-y: auto; /* 메인 콘텐츠 스크롤 허용 */
+    background-color: #F9F9F9;
+}
+
+.video-grid {
+    display: grid; /* 그리드 레이아웃 */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 자동 크기 조정 */
+    gap: 20px;
+}
+
+.video-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card video {
+    width: 100%;
+    height: auto;
+}
+
+.video-info {
+    padding: 10px;
+}
+
+.video-info h3 {
+    font-size: 18px;
+    margin: 0 0 5px;
+}
+
+.video-info .channel-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #606060;
+}
+
+.video-info .meta-info {
+    font-size: 12px;
+    color: gray;
+}
+
+/* 비디오 카드 호버 효과 */
+.video-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #202020;
+    color: white;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 125px; /* 사이드바 너비를 반으로 줄임 */
+    }
+
+    header {
+        left: 125px; /* 사이드바 너비에 맞게 조정 */
+        width: calc(100% - 125px);
+    }
+
+    .main-content {
+        margin-left: 125px; /* 사이드바 너비에 맞게 조정 */
+        width: calc(100% - 125px);
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        display: none; /* 모바일 화면에서 사이드바 숨김 */
+    }
+
+    header {
+        left: 0;
+        width: 100%;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
