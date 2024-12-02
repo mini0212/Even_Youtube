@@ -97,3 +97,13 @@ document.addEventListener('click', (event) => {
 		handleResize();
 	}
 });
+
+// nav 클릭시 이벤트
+const navbarItems = document.querySelectorAll('.navbar-item');
+
+navbarItems.forEach((item) => {
+    item.addEventListener('click', () => {
+        navbarItems.forEach((item) => item.classList.remove('selected'));
+        item.classList.add('selected');
+    });
+});
