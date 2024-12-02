@@ -1,12 +1,12 @@
 /* 사이드바 기본 (확장) */
 .even-sidebar{
-	width:200px;
+	width:228px;
 }
 .even-sidebar-container {
-	width: 200px;
+	width: 228px;
 	display: flex;
 	align-items: center;
-	padding-right: 60px;
+	padding-right: 12px; 
 	overflow-x: hidden;
 	overflow-y: scroll;
 }
@@ -227,10 +227,8 @@
 /* footer */
 
 .even-sidebar-footer {
-	padding-left: 20px;
-	margin-top: 20px;
-	width: 205px;
-
+	max-width: 192px;
+	padding: 16px 24px 0;
 }
 
 .even-sidebar-footer-info {
@@ -253,12 +251,12 @@
 
 
 .even-sidebar-footer-termpolicy {
+	width: 180px;
 	display: flex;
 	flex-wrap: wrap;
 	column-gap: 5px;
 	align-content: flex-start;
 	margin-bottom: 15px;
-	width: 150px;
 }
 
 .even-sidebar-footer-termpolicy-btn {
@@ -274,20 +272,20 @@
 
 
 .even-sidebar-footer-copyright {
-	padding: 1px 2px;
-	color: rgb(122, 122, 122);
+	font-family: "Roboto", "Arial", sans-serif;
+	width: 195px;
+	color: #717171;
 	font-size: 12px;
-	font-weight: 400;
+	font-weight: 500;
 	line-height: 17px;
 	letter-spacing: 0.1px;
-	width: 197px;
+	margin-bottom: 15px;
 }
 
 .even-sidebar-footer-copyright p {
 	white-space: normal;
 	/* 줄바꿈 허용 */
 	overflow-wrap: break-word;
-	/* 긴 단어 줄바꿈 */
 	margin: 0;
 }
 
@@ -412,3 +410,4 @@
 .even-sidebar {
     transition: all 0.3s ease-in-out;
 }
+
