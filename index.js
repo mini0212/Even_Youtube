@@ -88,3 +88,12 @@ handleResize();
 
 // 화면 크기 변경 시 이벤트 추가
 window.addEventListener('resize', handleResize);
+
+// 헤더 외부 클릭시 이벤트
+const header = document.querySelector('.header');
+document.addEventListener('click', (event) => {
+	if (!header.contains(event.target)) {
+		isSearchClicked = false;
+		handleResize();
+	}
+});
