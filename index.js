@@ -3,6 +3,9 @@ const leftSection = document.getElementsByClassName('left-section');
 const middleSection = document.getElementsByClassName('middle-section');
 const middleVoiceButton = document.querySelector('.voice-search-btn');
 const rightSectionButtons = document.querySelectorAll('.right-section button');
+const scrollContainer = document.querySelector('.navbar-menu');
+const leftButton = document.querySelector('.scroll-btn.left');
+const rightButton = document.querySelector('.scroll-btn.right');
 
 let isSearchClicked = false;
 
@@ -106,4 +109,22 @@ navbarItems.forEach((item) => {
         navbarItems.forEach((item) => item.classList.remove('selected'));
         item.classList.add('selected');
     });
+});
+
+
+// scroll 버튼 이벤트
+const scrollAmount = 200;
+
+// Scroll 왼쪽 클릭시
+leftButton.addEventListener('click', () => {
+  scrollContainer.scrollBy({
+    left: -scrollAmount,
+  });
+});
+
+// Scroll 오른쪽 클릭시
+rightButton.addEventListener('click', () => {
+  scrollContainer.scrollBy({
+    left: scrollAmount,
+  });
 });
