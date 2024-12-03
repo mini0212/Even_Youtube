@@ -1,30 +1,72 @@
 /* navbar */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: black;
+}
+
 .navbar-menu {
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 10px;
+    flex: 1;
+    scroll-behavior: smooth;
 }
 
 .navbar-item {
-	list-style: none;
-	border: none;
-	background-color: #333;
-	color: white;
-	margin: 0 4px;
-	border-radius: 8px;
-	padding: 8px 12px;
-	font-size: 1rem;
-	font-weight: 500;
-	cursor: pointer;
-	transition: background-color 0.25s;
+    flex: 0 0 auto;
+    list-style: none;
+    border: none;
+    background-color: #333;
+    color: white;
+    margin: 15px 4px 30px;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 1rem;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.25s;
 }
+
 .navbar-item:hover {
-	background-color: #737373;
+    background-color: #737373;
 }
 
 .navbar-item.selected {
     background-color: white;
     color: black;
-	border-color: black;
+    border-color: black;
+}
+
+.scroll-btn {
+    margin: 15px 4px 30px;
+    justify-content: center;
+    align-items: center;
+    background-color:black;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.25s;
+    display: none;
+}
+
+.scroll-btn:hover {
+    background-color: #737373;
+}
+
+.back-icon, .next-icon{
+    align-items: center;
+    width: 20px;
+    height: 20px;
 }
 
 main {
@@ -34,11 +76,13 @@ main {
     top: 66px;
     width: calc(100% - 300px);
 }
+
 .video-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
+
 .video-card {
     background-color: white;
     border-radius: 8px;
@@ -47,35 +91,43 @@ main {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
 }
+
 .video-card video {
     width: 100%;
     height: auto;
 }
+
 .video-info {
     padding: 10px;
 }
+
 .video-info h3 {
     font-size: 18px;
     margin: 0 0 5px;
 }
+
 .video-info .channel-name {
     font-size: 14px;
     font-weight: bold;
     color: #606060;
 }
+
 .video-info .meta-info {
     font-size: 12px;
     color: gray;
 }
+
 /* 호버 효과 */
 .video-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .video-card:hover video {
     transition: none;
     animation: play-hover 0.5s forwards;
 }
+
 /* 푸터 */
 footer {
     text-align: center;
@@ -83,30 +135,68 @@ footer {
     background-color: #202020;
     color: white;
 }
+
 /* 반응형 디자인 */
+@media (max-width: 1048px) {
+    .scroll-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-item {
+        flex: 1;
+    }
+
+    .navbar-menu {
+        gap: 5px;
+    }
+}
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: flex-start;
     }
+
     .search-bar {
         width: 100%;
         display: flex;
         justify-content: space-between;
         margin-top: 10px;
     }
+
     .video-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
+
+    .navbar-item {
+        flex: 1;
+    }
+
+    .navbar-menu {
+        gap: 5px;
+    }
 }
+
 @media (max-width: 480px) {
     .video-info h3 {
         font-size: 16px;
     }
+
     .video-info .channel-name {
         font-size: 12px;
     }
+
     .video-info .meta-info {
         font-size: 10px;
+    }
+    
+    .navbar-item {
+        flex: 1;
+    }
+
+    .navbar-menu {
+        gap: 5px;
     }
 }
