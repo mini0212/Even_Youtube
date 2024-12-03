@@ -1,21 +1,79 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Even_Youtube</title>
-
-	<link rel="stylesheet" href="styles/general.css" />
-	<link rel="stylesheet" href="styles/header.css" />
-	<link rel="stylesheet" href="styles/main.css" />
-	<link rel="stylesheet" href="styles/sidebar.css" />
-	<link rel="stylesheet" href="styles/video.css" />
+	<link rel="stylesheet" href="/styles/general.css" />
+	<link rel="stylesheet" href="/styles/header.css" />
+	<link rel="stylesheet" href="/styles/main.css" />
+	<link rel="stylesheet" href="/styles/sidebar.css" />
+	<link rel="stylesheet" href="/styles/video.css" />
 </head>
 
 <body>
+	<header class="header">
+		<div class="header-container">
+			<div class="left-section">
+				<button id="header-menu" class="header__effect-round-button">
+					<img class="header__effect-round-button-icon" src="./assets/icons/menu.png" alt="menu" />
+				</button>
+				<img class="header-logo" src="./assets/icons/logo-dark.png" alt="logo" />
+			</div>
+			<div class="middle-section">
+				<div class="search-bar-container">
+					<div class="search-bar-input-container">
+						<img class="search-bar__input-icon" src="./assets/icons/search.png" alt="search" />
+						<input class="search-bar__input" type="text" placeholder="검색" />
+					</div>
+					<button class="search-btn">
+						<img class="search-icon" src="./assets/icons/search.png" alt="search" />
+						<div id="tooltip">검색</div>
+					</button>
+				</div>
+				<button class="voice-search-btn">
+					<img class="voice-search-btn-icon" src="./assets/icons/voice.png" alt="voice-search" />
+					<div id="tooltip">음성으로 검색</div>
+				</button>
+			</div>
+			<div class="right-section">
+				<button id="search-button" class="header__effect-round-button">
+					<img class="search-button-icon" src="./assets/icons/search.png" alt="search" />
+					<div id="tooltip">검색</div>
+				</button>
+				<button id="voice-search-button" class="header__effect-round-button">
+					<img class="voice-search-btn-icon" src="./assets/icons/voice.png" alt="voice-search" />
+					<div id="tooltip">음성으로 검색</div>
+				</button>
+				<button id="upload-button" class="header__effect-round-button">
+					<img class="upload-button-icon" src="assets/icons/add-video.png" alt="upload" />
+					<div id="tooltip">만들기</div>
+				</button>
+				<button id="notification-button" class="header__effect-round-button">
+					<img class="notification-button-icon" src="assets/icons/notification.png" alt="notification" />
+					<div id="tooltip">알림</div>
+				</button>
+				<button id="user-profile-button">
+					<img class="user-profile-img" src="assets/icons/profile.png" alt="profile" />
+				</button>
+			</div>
+		</div>
+		<div class="navbar-container">
+			<ul class="navbar-menu">
+				<li class="navbar-item">전체</li>
+				<li class="navbar-item">뉴스</li>
+				<li class="navbar-item">라이브</li>
+				<li class="navbar-item">음악</li>
+				<li class="navbar-item">게임</li>
+				<li class="navbar-item">믹스</li>
+				<li class="navbar-item">팟캐스트</li>
+				<li class="navbar-item">반려동물</li>
+				<li class="navbar-item">요리</li>
+			</ul>
+		</div>
+	</header>
+
 	<!-- 사이드바 -->
 	<nav class="even-sidebar">
 		<div class="even-sidebar-container">
@@ -204,6 +262,7 @@
 	</main>
 	<footer>&copy; 2024 비디오 플랫폼</footer>
 	<script src="script.js"></script>
+	<script src="/index.js"></script>
 </body>
 
 </html>
