@@ -11,13 +11,14 @@
 
 .header-container {
 	height: 65px;
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-
 	background-color: black;
 	border-bottom: 1px solid black;
 	padding: 0 16px;
+	box-sizing: border-box;
 }
 
 .left-section {
@@ -140,7 +141,6 @@
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	justify-content: space-between;
 	gap: 10px;
 }
 
@@ -214,13 +214,14 @@ button:hover #tooltip {
 	cursor: pointer;
 	transition: background-color 0.25s;
 }
+
 .navbar-item:hover {
 	background-color: #737373;
 }
 
 .navbar-item.selected {
-    background-color: white;
-    color: black;
+	background-color: white;
+	color: black;
 	border-color: black;
 }
 
