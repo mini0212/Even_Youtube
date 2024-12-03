@@ -1,6 +1,38 @@
+/* navbar */
+.navbar-menu {
+	display: flex;
+	align-items: center;
+}
+
+.navbar-item {
+	list-style: none;
+	border: none;
+	background-color: #333;
+	color: white;
+	margin: 0 4px;
+	border-radius: 8px;
+	padding: 8px 12px;
+	font-size: 1rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: background-color 0.25s;
+}
+.navbar-item:hover {
+	background-color: #737373;
+}
+
+.navbar-item.selected {
+    background-color: white;
+    color: black;
+	border-color: black;
+}
+
 main {
-    padding: 20px;
-    background-color: #F9F9F9;
+    padding: 0 20px 20px 20px;
+    position: absolute;
+    right: 0;
+    top: 66px;
+    width: calc(100% - 300px);
 }
 .video-grid {
     display: grid;
