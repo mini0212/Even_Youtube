@@ -103,7 +103,7 @@
 }
 
 .search-bar-container:focus-within .search-bar-input-container {
-	border-color: blue;
+	border-color: lightskyblue;
 }
 
 .search-bar-container:focus-within .search-bar__input-icon {
