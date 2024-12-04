@@ -128,3 +128,4 @@ rightButton.addEventListener('click', () => {
     left: scrollAmount,
   });
 });
+
