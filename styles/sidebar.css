@@ -1,10 +1,15 @@
 .even-sidebar.overlay {
 	position: fixed;
-	top: 0;
-	left: 0;
+	top: 4px;
+	left: -240px;
 	width: 240px;
 	height: 100%;
+	padding-right: 0;
+	margin-left: 0;
+	margin-right: 0;
 	background-color: #0f0f0f;
+	overflow-x: clip; /* 가로 스크롤 비활성화 */
+  overflow-y: auto;
 	z-index: 1000; /* 콘텐츠 위로 덮도록 높은 z-index 설정 */
 	display: none; /* 기본적으로 숨김 상태 */
 	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
@@ -12,7 +17,7 @@
 }
 /* container */
 .even-sidebar-container {
-	width: 240px;
+	width: 233px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -38,7 +43,6 @@
 	display: flex;
 	align-items: center;
 	margin-left: -48px;
-	margin-top: 4px;
 }
 
 .side-header-menu {
@@ -73,6 +77,7 @@
 
 /* section */
 .even-sidebar-section {
+	max-width: 100%;
 	display: flex;
 	flex-direction: column;
 	padding: 0 4px;
@@ -80,7 +85,7 @@
 }
 
 .even-sidebar-inner {
-	padding: 0 10px;
+	padding: 0 6px;
 	padding-bottom: 10px;
 	 
 }
@@ -289,7 +294,7 @@
 
 .even-sidebar-footer {
 	max-width: 192px;
-	padding: 16px 24px 0;
+	padding: 16px 18px 0;
 }
 
 .even-sidebar-footer-info {
