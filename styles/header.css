@@ -78,6 +78,7 @@
 .search-bar__input {
 	position: relative;
 	background-color: transparent;
+	color: white;
 	border: none;
 	outline: none;
 	font-size: 18px;
