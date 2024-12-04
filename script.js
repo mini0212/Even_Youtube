@@ -82,10 +82,25 @@ window.addEventListener("scroll", () => {
 });
 
 // 검색
+const searchInput = document.getElementById("search-bar__input");
 const searchInputButton = document.getElementById("search-btn");
+const clearButton = document.getElementById("search-bar__clear-button");
+
+searchInput.addEventListener("input", () => {
+	if (searchInput.value.trim() !== "") {
+		clearButton.style.display = "inline";
+	} else {
+		clearButton.style.display = "none";
+	}
+});
+
+clearButton.addEventListener("click", () => {
+	searchInput.value = "";
+	clearButton.style.display = "none";
+	renderVideos(sampleVideos);
+});
 
 function filterVideos() {
-	const searchInput = document.getElementById("search-bar__input");
 	const searchText = searchInput.value.toLowerCase().trim();
 	const filterVideos = sampleVideos.filter((video) => {
 		return (
