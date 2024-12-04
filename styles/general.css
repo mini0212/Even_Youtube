@@ -10,3 +10,72 @@ body {
     font-family: "Roboto", "Arial", "Noto Sans KR", sans-serif;
     /* display: block; (기본값) */
 }
+
+.side-and-contents {
+	display: flex;
+	flex-direction: row;
+}
+
+main {
+	padding: 0 20px 20px 20px;
+	margin-left: 240px;
+	right: 0;
+	margin-top: 66px;
+	flex: 1;
+}
+
+/* 사이드바 기본 (확장) */
+.even-sidebar{
+	width: 240px;
+	height: 100%;
+	position: fixed;
+	top: 4px;
+	left: 0;
+	overflow: hidden;
+	padding-right: 16px;
+	box-sizing: border-box;
+	transition: width 0.3s ease;
+}
+
+.even-mini-sidebar {
+	position: fixed;
+	left: 4px;
+	width: 72px;
+	margin-top: 66px;
+	transition: width 0.3s ease;
+	display: none;
+}
+
+/* 사이드바와 콘텐츠 미디어 쿼리 */
+@media (max-width: 791px) {
+	.even-sidebar {
+		display: none;
+	}
+	.even-mini-sidebar {
+		display: none;
+	}
+	main {
+		margin-left: 0px;
+	}
+}
+
+@media (min-width: 792px) and (max-width: 1312px) {
+	.even-sidebar {
+		display: none;
+	}
+	.even-mini-sidebar {
+		display: flex;
+	}
+	main {
+		margin-left: 72px;
+	}
+}
+
+@media (min-width: 1313px) {
+	.even-sidebar {
+		display: block;
+	}
+	.even-mini-sidebar {
+		display: none;
+	}
+}

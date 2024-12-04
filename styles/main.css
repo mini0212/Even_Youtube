@@ -72,15 +72,9 @@
     height: 20px;
 }
 
-main {
-    padding: 0 20px 20px 20px;
-    position: absolute;
-    right: 0;
-    top: 66px;
-    width: calc(100% - 300px);
-}
 
 .video-grid {
+		padding-left: 4px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
