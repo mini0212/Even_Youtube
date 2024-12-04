@@ -55,22 +55,62 @@ function createVideoCard(video) {
 }
 
 // 초기 비디오 로드
-sampleVideos.forEach((video) => {
-    videoGrid.appendChild(createVideoCard(video));
-});
+function renderVideos(videos) {
+	videoGrid.innerHTML = ""; // 기존 비디오 초기화
+	videos.forEach((video) => {
+		videoGrid.appendChild(createVideoCard(video));
+	});
+}
 
 // 무한 스크롤 구현
 let loading = false;
 window.addEventListener("scroll", () => {
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 200 && !loading) {
-        loading = true;
+	if (
+		window.innerHeight + window.scrollY >= document.body.offsetHeight - 200 &&
+		!loading
+	) {
+		loading = true;
 
-        // API 호출 대신 샘플 데이터 추가
-        setTimeout(() => {
-            sampleVideos.forEach((video) => {
-                videoGrid.appendChild(createVideoCard(video));
-            });
-            loading = false;
-        }, 1000);
-    }
+		// API 호출 대신 샘플 데이터 추가
+		setTimeout(() => {
+			sampleVideos.forEach((video) => {
+				videoGrid.appendChild(createVideoCard(video));
+			});
+			loading = false;
+		}, 1000);
+	}
 });
+
+// 검색
+const searchInput = document.getElementById("search-bar__input");
+const searchInputButton = document.getElementById("search-btn");
+const clearButton = document.getElementById("search-bar__clear-button");
+
+searchInput.addEventListener("input", () => {
+	if (searchInput.value.trim() !== "") {
+		clearButton.style.display = "inline";
+	} else {
+		clearButton.style.display = "none";
+	}
+});
+
+clearButton.addEventListener("click", () => {
+	searchInput.value = "";
+	clearButton.style.display = "none";
+	renderVideos(sampleVideos);
+});
+
+function filterVideos() {
+	const searchText = searchInput.value.toLowerCase().trim();
+	const filterVideos = sampleVideos.filter((video) => {
+		return (
+			video.title.toLowerCase().trim().includes(searchText) ||
+			video.channel.toLowerCase().trim().includes(searchText)
+		);
+	});
+	renderVideos(filterVideos);
+}
+
+searchInputButton.addEventListener("click", filterVideos);
+
+renderVideos(sampleVideos);

@@ -9,7 +9,6 @@
 	<link rel="stylesheet" href="/styles/header.css" />
 	<link rel="stylesheet" href="/styles/main.css" />
 	<link rel="stylesheet" href="/styles/sidebar.css" />
-	<link rel="stylesheet" href="/styles/video.css" />
 </head>
 
 <body>
@@ -22,12 +21,16 @@
 				<img class="header-logo" src="./assets/icons/logo-dark.png" alt="logo" />
 			</div>
 			<div class="middle-section">
-				<div class="search-bar-container">
+				<div id="search-bar-container" class="search-bar-container">
+					<button id="search-bar__back-button">
+						<img class="search-bar__back-button-icon" src="./assets/icons/back-btn-icon.png" alt="back" />
+					</button>
 					<div class="search-bar-input-container">
 						<img class="search-bar__input-icon" src="./assets/icons/search.png" alt="search" />
-						<input class="search-bar__input" type="text" placeholder="검색" />
+						<input id="search-bar__input"class="search-bar__input" type="text" placeholder="검색" />
+						<button id="search-bar__clear-button">X</button>
 					</div>
-					<button class="search-btn">
+					<button id="search-btn" class="search-btn">
 						<img class="search-icon" src="./assets/icons/search.png" alt="search" />
 						<div id="tooltip">검색</div>
 					</button>
