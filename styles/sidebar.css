@@ -1,9 +1,9 @@
 /* 사이드바 기본 (확장) */
 .even-sidebar{
 	width: 240px;
-	height: calc(100vh - 66px);
+	height: calc(100vh - 4px);
 	position: fixed;
-	top: 66px;
+	top: 4px;
 	left: 0;
 	overflow: hidden;
 	padding-right: 16px;
@@ -28,7 +28,28 @@
 .even-sidebar-container {
 	width: 240px;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
+}
+
+/* side header */
+.side-header-section {
+	display: flex;
+	align-items: center;
+	margin-left: -48px;
+	margin-bottom: 7px;
+}
+
+.side-header-menu {
+	height: 24px;
+}
+
+.side-header-logo {
+	width: auto;
+	height: 56px;
+	width: 131px;
+	object-fit: fill;
+	margin-left: -10px;
 }
 
 /* section */
@@ -324,6 +345,7 @@
 
 .even-mini-sidebar {
 	width: 72px;
+	margin-top: 66px;
 }
 
 .even-mini-sidebar-btns {
