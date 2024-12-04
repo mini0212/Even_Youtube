@@ -58,6 +58,12 @@
 	margin: 0 0 0 40px;
 }
 
+#search-bar__back-button {
+	display: inline;
+	background-color: transparent;
+	border: none;
+}
+
 .search-bar-input-container {
 	display: flex;
 	align-items: center;
