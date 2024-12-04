@@ -1,4 +1,15 @@
-
+.even-sidebar.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 240px;
+	height: 100%;
+	background-color: #0f0f0f;
+	z-index: 1000; /* 콘텐츠 위로 덮도록 높은 z-index 설정 */
+	display: none; /* 기본적으로 숨김 상태 */
+	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+	transition: left 0.2s ease-out;
+}
 /* container */
 .even-sidebar-container {
 	width: 240px;
@@ -27,7 +38,7 @@
 	display: flex;
 	align-items: center;
 	margin-left: -48px;
-	margin-bottom: 7px;
+	margin-top: 4px;
 }
 
 .side-header-menu {
@@ -40,6 +51,24 @@
 	width: 131px;
 	object-fit: fill;
 	margin-left: -10px;
+}
+
+.side-header__effect-round-button {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	width: 40px;
+	border: none;
+	background-color: transparent;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.side-header__effect-round-button:hover {
+	background-color: #737373;
+	transition: background-color 0.3s;
 }
 
 /* section */
