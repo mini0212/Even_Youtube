@@ -15,8 +15,6 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-
-	border-bottom: 1px solid #0f0f0f;
 	padding: 0 16px;
 	box-sizing: border-box;
 }
@@ -103,22 +101,20 @@
 	cursor: pointer;
 }
 
-/* focus-within */
-.search-bar-container:focus-within {
-	margin-left: 0;
+/* Search Bar Focus */
+#search-bar__input:focus {
+	padding-left: 0px;
+	padding-inline-start: 0;
 }
 
-.search-bar-container:focus-within .search-bar-input-container {
+.search-bar-input-container:has(#search-bar__input:focus) {
+	margin-left: 0;
 	border-color: lightskyblue;
 }
 
-.search-bar-container:focus-within .search-bar__input-icon {
+.search-bar-input-container:has(#search-bar__input:focus)
+	.search-bar__input-icon {
 	display: flex;
-}
-
-.search-bar-container:focus-within .search-bar__input {
-	padding-left: 0px;
-	padding-inline-start: 0;
 }
 
 .search-btn {
@@ -211,36 +207,6 @@
 
 button:hover #tooltip {
 	opacity: 0.8;
-}
-
-/* navbar */
-.navbar-menu {
-	display: flex;
-	align-items: center;
-}
-
-.navbar-item {
-	list-style: none;
-	border: none;
-	background-color: #333;
-	color: white;
-	margin: 0 4px;
-	border-radius: 8px;
-	padding: 8px 12px;
-	font-size: 1rem;
-	font-weight: 500;
-	cursor: pointer;
-	transition: background-color 0.25s;
-}
-
-.navbar-item:hover {
-	background-color: #737373;
-}
-
-.navbar-item.selected {
-	background-color: white;
-	color: black;
-	border-color: black;
 }
 
 .upload-button-icon {

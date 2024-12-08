@@ -8,14 +8,12 @@ const scrollContainer = document.querySelector(".navbar-menu");
 const leftButton = document.querySelector(".scroll-btn.left");
 const rightButton = document.querySelector(".scroll-btn.right");
 const searchBackButton = document.getElementById("search-bar__back-button");
-const searchBarInput = document.getElementById("search-bar__input");
 
 let isSearchClicked = false;
 
 searchButton.addEventListener("click", () => {
 	isSearchClicked = true;
 	handleResize();
-	searchBarInput.classList.add("focused");
 	leftSection[0].style.display = "none";
 	middleSection[0].style.display = "flex";
 	middleVoiceButton.style.display = "none";
@@ -111,6 +109,22 @@ document.addEventListener("click", (event) => {
 		handleResize();
 	}
 });
+
+// search-button 클릭 이벤트
+const searchBarInput = document.getElementById("search-bar__input");
+
+// 포커스 이벤트 처리
+searchButton.addEventListener("click", () => {
+	searchBarInput.focus();
+});
+
+// 엔터시 검색
+const search = document.getElementById("search-btn");
+searchBarInput.addEventListener("keydown", (event) => {
+	if (event.key === "Enter") {
+		search.click();
+	}
+})
 
 // nav 클릭시 이벤트
 const navbarItems = document.querySelectorAll(".navbar-item");
