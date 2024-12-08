@@ -118,6 +118,14 @@ searchButton.addEventListener("click", () => {
 	searchBarInput.focus();
 });
 
+// 엔터시 검색
+const search = document.getElementById("search-btn");
+searchBarInput.addEventListener("keydown", (event) => {
+	if (event.key === "Enter") {
+		search.click();
+	}
+})
+
 // nav 클릭시 이벤트
 const navbarItems = document.querySelectorAll(".navbar-item");
 
