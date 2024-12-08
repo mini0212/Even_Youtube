@@ -1,13 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YouTube Style Page</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Layout</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main id="video-grid"></main>
-  <script src="script.js"></script>
+    <header class="header-bar">
+        <!-- Temporary Header -->
+        <h1>YouTube</h1>
+    </header>
+    <div class="layout">
+        <aside class="sidebar">
+            <!-- Temporary Sidebar -->
+            <ul class="sidebar-buttons">
+                <li>
+                    <img src="home-icon.png" alt="Home" />
+                    <span>Home</span>
+                </li>
+                <li>
+                    <img src="shorts-icon.png" alt="Shorts" />
+                    <span>Shorts</span>
+                </li>
+                <li>
+                    <img src="subscriptions-icon.png" alt="Subscriptions" />
+                    <span>Subscriptions</span>
+                </li>
+                <li>
+                    <img src="library-icon.png" alt="Library" />
+                    <span>Library</span>
+                </li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <div class="video-grid">
+                <!-- Example Video Cards -->
+                <div class="video-card">Video 1</div>
+                <div class="video-card">Video 2</div>
+                <div class="video-card">Video 3</div>
+                <div class="video-card">Video 4</div>
+                <div class="video-card">Video 5</div>
+                <div class="video-card">Video 6</div>
+            </div>
+        </main>
+    </div>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        .header-bar {
+            height: 60px;
+            background-color: #f1f1f1;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .layout {
+            display: flex;
+            flex: 1;
+        }
+
+        .sidebar {
+            width: 72px;
+            background-color: #f9f9f9;
+            padding: 8px 0;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sidebar-buttons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+        .sidebar-buttons li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            padding: 8px 0;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .sidebar-buttons li img {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 4px;
+        }
+
+        .sidebar-buttons li span {
+            font-size: 10px;
+            color: #606060;
+        }
+
+        .sidebar-buttons li:hover {
+            background-color: #e3e3e3;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 16px;
+        }
+
+        .video-card {
+            background-color: #ccc;
+            aspect-ratio: 16 / 9; /* Ensures proper video card proportions */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 360px) {
+            .video-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        @media (min-width: 361px) and (max-width: 683px) {
+            .sidebar {
+                display: none;
+            }
+            .video-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        @media (min-width: 684px) and (max-width: 791px) {
+            .sidebar {
+                display: none;
+            }
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 792px) and (max-width: 1081px) {
+            .sidebar {
+                display: flex;
+            }
+            .sidebar-buttons {
+                display: flex;
+            }
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1082px) and (max-width: 1312px) {
+            .sidebar {
+                display: flex;
+            }
+            .sidebar-buttons {
+                display: flex;
+            }
+            .video-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 16px;
+                grid-auto-rows: auto; /* Fixes overlapping issues */
+            }
+
+            .video-card {
+                aspect-ratio: 16 / 9; /* Reinforces consistent aspect ratio */
+            }
+        }
+
+        @media (min-width: 1313px) and (max-width: 1575px) {
+            .sidebar {
+                display: flex;
+                width: 240px;
+                align-items: flex-start;
+                padding: 16px 0;
+            }
+
+            .sidebar-buttons {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 0 16px;
+            }
+
+            .sidebar-buttons li {
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 8px 16px;
+            }
+
+            .sidebar-buttons li img {
+                width: 24px;
+                height: 24px;
+                margin-right: 16px;
+            }
+
+            .sidebar-buttons li span {
+                font-size: 14px;
+                color: #606060;
+            }
+
+            .sidebar-buttons li:hover {
+                background-color: #f1f1f1;
+                border-radius: 4px;
+            }
+
+            .video-grid {
+                grid-template-columns: repeat(3, 1fr);
+                grid-auto-rows: auto;
+            }
+        }
+
+        @media (min-width: 1576px) {
+            .video-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 16px;
+                grid-auto-rows: auto;
+            }
+
+            .sidebar {
+                display: flex;
+                width: 240px;
+                align-items: flex-start;
+                padding: 16px 0;
+            }
+
+            .sidebar-buttons {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 0 16px;
+            }
+
+            .sidebar-buttons li {
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 8px 16px;
+            }
+
+            .sidebar-buttons li img {
+                width: 24px;
+                height: 24px;
+                margin-right: 16px;
+            }
+
+            .sidebar-buttons li span {
+                font-size: 14px;
+                color: #606060;
+            }
+
+            .sidebar-buttons li:hover {
+                background-color: #f1f1f1;
+                border-radius: 4px;
+            }
+        }
+    </style>
 </body>
 </html>
