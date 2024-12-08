@@ -111,11 +111,11 @@ document.addEventListener("click", (event) => {
 });
 
 // search-button 클릭 이벤트
-const searchBarInput = document.getElementById('search-bar__input');
+const searchBarInput = document.getElementById("search-bar__input");
 
 // 포커스 이벤트 처리
-searchButton.addEventListener('click', () => {
-  searchBarInput.focus();
+searchButton.addEventListener("click", () => {
+	searchBarInput.focus();
 });
 
 // nav 클릭시 이벤트

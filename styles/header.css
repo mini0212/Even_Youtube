@@ -112,7 +112,8 @@
 	border-color: lightskyblue;
 }
 
-.search-bar-input-container:has(#search-bar__input:focus) .search-bar__input-icon {
+.search-bar-input-container:has(#search-bar__input:focus)
+	.search-bar__input-icon {
 	display: flex;
 }
 
