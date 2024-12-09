@@ -100,6 +100,17 @@ clearButton.addEventListener("click", () => {
 	renderVideos(sampleVideos);
 });
 
+// 텍스트 없을 때 clear 버튼 숨기기
+clearButton.hidden = true;
+
+searchInput.addEventListener("input", () => {
+	if (searchInput.value.trim() !== "") {
+		clearButton.hidden = false;
+	} else {
+		clearButton.hidden = true;
+	}
+});
+
 function filterVideos() {
 	const searchText = searchInput.value.toLowerCase().trim();
 	const filterVideos = sampleVideos.filter((video) => {
