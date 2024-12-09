@@ -86,19 +86,17 @@
 
 
 .video-grid {
-		padding-left: 4px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .video-card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 }
 
 .video-card video {
@@ -106,13 +104,30 @@
     height: auto;
 }
 
+.thumbnail {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 .video-info {
-    padding: 10px;
+  padding: 8px;
 }
 
 .video-info h3 {
     font-size: 18px;
     margin: 0 0 5px;
+}
+
+.video-author,
+  .video-stats {
+    font-size: 14px;
+    color: gray;
+  }
+
+.video-title {
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .video-info .channel-name {
@@ -128,13 +143,25 @@
 
 /* 호버 효과 */
 .video-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
 }
 
 .video-card:hover video {
     transition: none;
     animation: play-hover 0.5s forwards;
+}
+
+/* 미디어 쿼리 */
+@media (max-width: 768px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .video-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 /* 푸터 */
