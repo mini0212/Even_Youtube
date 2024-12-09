@@ -1,0 +1,449 @@
+.even-sidebar.overlay {
+	position: fixed;
+	top: 4px;
+	left: -240px;
+	width: 240px;
+	height: 100%;
+	padding-right: 0;
+	margin-left: 0;
+	margin-right: 0;
+	background-color: #0f0f0f;
+	overflow-x: clip; /* 가로 스크롤 비활성화 */
+  overflow-y: auto;
+	z-index: 1000; /* 콘텐츠 위로 덮도록 높은 z-index 설정 */
+	display: none; /* 기본적으로 숨김 상태 */
+	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+	transition: left 0.2s ease-out;
+}
+/* container */
+.even-sidebar-container {
+	width: 233px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+/* 사이드바 스크롤 */
+.even-sidebar:hover {
+	overflow-y: scroll; /* 사이드 바 호버 시 스크롤 보이기 */
+}
+
+.even-sidebar::-webkit-scrollbar {
+    width: 6px;
+		height: 30px;
+    background: transparent; /* 스크롤 트랙 색상 투명 */
+}
+
+.even-sidebar::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.4); /* 스크롤 색상과 투명도 */
+}
+
+/* side header */
+.side-header-section {
+	display: flex;
+	align-items: center;
+	margin-left: -48px;
+}
+
+.side-header-menu {
+	height: 24px;
+}
+
+.side-header-logo {
+	width: auto;
+	height: 56px;
+	width: 131px;
+	object-fit: fill;
+	margin-left: -10px;
+}
+
+.side-header__effect-round-button {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	width: 40px;
+	border: none;
+	background-color: transparent;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.side-header__effect-round-button:hover {
+	background-color: #737373;
+	transition: background-color 0.3s;
+}
+
+/* section */
+.even-sidebar-section {
+	max-width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 0 4px;
+	box-sizing: border-box;
+}
+
+.even-sidebar-inner {
+	padding: 0 6px;
+	padding-bottom: 10px;
+	 
+}
+
+.even-sidebar-inner.menu {
+	width: 228px;
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+	box-sizing: border-box;
+}
+
+.even-sidebar-inner.menu-bottom {
+	width: 228px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	box-sizing: border-box;
+}
+
+/* 사이드바 메뉴 */
+.even-sidebar-menu {
+	width: 200px;
+	height: 40px;
+	margin: 6px 0;
+	font-size: 16px;
+	align-content: center;
+	padding-left: 10px;
+	cursor: default;
+}
+
+.menu-hover:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.menu-hover:active {
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 10px;
+}
+
+/* 사이드바 아이템 */
+.even-sidebar-item {
+	width: 200px;
+	display: flex;
+	cursor: pointer;
+	margin: 6px 0;
+	font-weight: 300;
+	font-size: 14px;
+	padding-left: 10px;
+	align-items: center;
+}
+
+.even-sidebar-item:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+}
+
+.even-sidebar-item:active {
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 10px;
+}
+
+.items {
+	width: 36px;
+	height: 24px;
+	color: white;
+	margin-right: 24px;
+}
+
+.sidebar-text {
+	width: 200px;
+	padding: 5px 0;
+	line-height: 25px;
+	font-weight: 100;
+	color: #f1f1f1;
+}
+
+.weight200 {
+	font-weight: 200;
+}
+
+.weight300 {
+	font-weight: 300;
+}
+
+/* 위에서부터 순서대로 아이콘 배치 */
+
+.sidebar-toggle {
+	background-image: url(/icons/0.\ toggle.png);
+}
+
+.sidebar-logo {
+	width: 93px;
+	height: 20px;
+	background-image: url(/logo.png);
+	background-size: cover;
+}
+
+.country-code {
+	height: 44px;
+	margin: 12px 0 0 -10px;
+	font-size: 10px;
+}
+
+.icon-1 {
+	background-image: url(/assets/icons/1.\ Home.png);
+}
+
+.icon-2 {
+	background-image: url(/assets/icons/2.\ Shorts.png);
+}
+
+.icon-3 {
+	background-image: url(/assets/icons/3.\ Subscribe.png);
+}
+
+.icon-4 {
+	background-image: url(/assets/icons/4.\ Watching.png);
+}
+
+.icon-5 {
+	background-image: url(/assets/icons/5.\ Playlist.png);
+}
+
+.icon-6 {
+	background-image: url(/assets/icons/6.\ My_video.png);
+}
+
+.icon-7 {
+	background-image: url(/assets/icons/7.\ Watch_later.png);
+}
+
+.icon-8 {
+	background-image: url(/assets/icons/8.\ Liker_video.png);
+}
+
+.icon-9 {
+	background-image: url(/assets/icons/9.\ Trending.png);
+}
+
+.icon-10 {
+	background-image: url(/assets/icons/10.\ Shopping.png);
+}
+
+.icon-11 {
+	background-image: url(/assets/icons/11.\ Music.png);
+}
+
+.icon-12 {
+	background-image: url(/assets/icons/12.\ Movies.png);
+}
+
+.icon-13 {
+	background-image: url(/assets/icons/13.\ Live.png);
+}
+
+.icon-14 {
+	background-image: url(/assets/icons/14.\ Gaming.png);
+}
+
+.icon-15 {
+	background-image: url(/assets/icons/15.\ News.png);
+}
+
+.icon-16 {
+	background-image: url(/assets/icons/16.\ Educate.png);
+	background-size: cover;
+}
+
+.icon-17 {
+	background-image: url(/assets/icons/17.\ Podcasts.png);
+}
+
+.icon-18 {
+	background-image: url(/assets/icons/18.\ Youtube_Premium.png);
+}
+
+.icon-19 {
+	background-image: url(/assets/icons/19.\ YouTube_Studio.png);
+}
+
+.icon-20 {
+	background-image: url(/assets/icons/20.\ Youtube_Music.png);
+}
+
+.icon-21 {
+	background-image: url(/assets/icons/21.Youtube_Kids.png);
+}
+
+.icon-22 {
+	background-image: url(/assets/icons/22.\ Setting.png);
+}
+
+.icon-23 {
+	background-image: url(/assets/icons/23.\ Report_history.png);
+}
+
+.icon-24 {
+	background-image: url(/assets/icons/24.\ Help.png);
+}
+
+.icon-25 {
+	background-image: url(/assets/icons/25.\ Support.png);
+}
+
+
+/* footer */
+
+.even-sidebar-footer {
+	max-width: 192px;
+	padding: 16px 18px 0;
+}
+
+.even-sidebar-footer-info {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 5px;
+	align-content: flex-start;
+	margin-bottom: 15px;
+}
+
+.even-sidebar-footer-info-btn {
+	padding: 1px 0.5px;
+	border: none;
+	background-color: transparent;
+	color: rgb(176, 176, 176);
+	font-size: 12.5px;
+	font-weight: 500;
+	letter-spacing: 0.3px;
+}
+
+
+.even-sidebar-footer-termpolicy {
+	width: 180px;
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 5px;
+	align-content: flex-start;
+	margin-bottom: 15px;
+}
+
+.even-sidebar-footer-termpolicy-btn {
+	padding: 0.5px 2px;
+	border: none;
+	background-color: transparent;
+	color: rgb(176, 176, 176);
+	font-size: 12.5px;
+	font-weight: 600;
+	letter-spacing: 0.3px;
+}
+
+
+
+.even-sidebar-footer-copyright {
+	font-family: "Roboto", "Arial", sans-serif;
+	width: 195px;
+	color: #717171;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 17px;
+	letter-spacing: 0.1px;
+	margin-bottom: 15px;
+}
+
+.even-sidebar-footer-copyright p {
+	white-space: normal;
+	/* 줄바꿈 허용 */
+	overflow-wrap: break-word;
+	margin: 0;
+}
+
+.even-sidebar-footer-copyright-btn {
+	all: unset;
+	display: inline;
+	font-size: inherit;
+	font-family: inherit;
+	padding: 1px 1px;
+	border: none;
+	background-color: transparent;
+	color: rgb(11, 180, 253);
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	max-width: 150px;
+}
+
+/* 미니 사이드바 */
+
+
+
+.even-mini-sidebar-btns {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 0;
+	padding: 0;
+}
+
+.even-mini-sidebar-btn {
+	position: relative;
+	width: 64px;
+	height: 44px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap: 6.5px;
+	border: none;
+	border-radius: 15px;
+	padding: 16px 0 14px;
+	font-size: 10px;
+	text-decoration: none;
+	color: white;
+	background-color: transparent; /* 기본 배경색 */
+  transition: background-color 0.5s ease; /* 기본 상태로 돌아가는 부드러운 전환 */
+	overflow: visible;
+}
+
+.even-mini-sidebar-btn span {
+	pointer-events: none; /* 내부 텍스트는 클릭 이벤트 비활성화 */
+}
+
+.even-mini-sidebar-btn:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+	transition: background-color 0.5s ease;
+
+}
+
+/* 가상 요소: 클릭 시 추가되는 레이어 */
+.even-mini-sidebar-btn::after {
+	content: ''; /* 가상 요소 생성 */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.1); /* 버튼 색상 + 투명도 */
+	opacity: 0; /* 기본 상태에서는 보이지 않음 */
+	transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
+	z-index: 1; /* 레이어가 버튼 위에 나타나도록 */
+	border-radius: 0;
+}
+
+/* 클릭 시 레이어 활성화 */
+.even-mini-sidebar-btn:active::after {
+	opacity: 1; /* 클릭 시 레이어가 나타남 */
+	transition: opacity 0.1s ease-in; /* 빠르게 나타남 */
+}
+
+
+
+/* 클릭 후 원래 상태로 돌아가기 */
+.even-mini-sidebar-btn:focus:not(:hover)::after {
+	opacity: 0; /* 다시 보이지 않게 설정 */
+	transition: opacity 0.5s ease-out; /* 부드럽게 사라짐 */
+}
+
+
+.even-mini-sidebar,
+.even-sidebar {
+    transition: all 0.3s ease-in-out;
+}
+

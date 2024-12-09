@@ -1,0 +1,211 @@
+/* 오버레이 기본 (숨김 상태) */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 어둡게 */
+    z-index: 999;
+    display: none;
+}
+
+/* navbar */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 10px;
+    flex: 1;
+    scroll-behavior: smooth;
+}
+
+.navbar-item {
+    flex: 0 0 auto;
+    list-style: none;
+    border: none;
+    background-color: #333;
+    color: white;
+    margin: 15px 4px 30px;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 1rem;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+
+.navbar-item:hover {
+    background-color: #737373;
+}
+
+.navbar-item.selected {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+.scroll-btn {
+    margin: 15px 4px 30px;
+    justify-content: center;
+    align-items: center;
+    background-color:#0f0f0f;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.25s;
+    display: none;
+}
+
+.scroll-btn:hover {
+    background-color: #737373;
+}
+
+.scroll-btn:active {
+	background-color: #9d9d9d;
+}
+
+.back-icon, .next-icon{
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+
+
+.video-grid {
+		padding-left: 4px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.video-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.video-card video {
+    width: 100%;
+    height: auto;
+}
+
+.video-info {
+    padding: 10px;
+}
+
+.video-info h3 {
+    font-size: 18px;
+    margin: 0 0 5px;
+}
+
+.video-info .channel-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #606060;
+}
+
+.video-info .meta-info {
+    font-size: 12px;
+    color: gray;
+}
+
+/* 호버 효과 */
+.video-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-card:hover video {
+    transition: none;
+    animation: play-hover 0.5s forwards;
+}
+
+/* 푸터 */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #202020;
+    color: white;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1048px) {
+    .scroll-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-item {
+        flex: 1;
+    }
+
+    .navbar-menu {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .video-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .navbar-item {
+        flex: 1;
+    }
+
+    .navbar-menu {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-info h3 {
+        font-size: 16px;
+    }
+
+    .video-info .channel-name {
+        font-size: 12px;
+    }
+
+    .video-info .meta-info {
+        font-size: 10px;
+    }
+    
+    .navbar-item {
+        flex: 1;
+    }
+
+    .navbar-menu {
+        gap: 5px;
+    }
+}
